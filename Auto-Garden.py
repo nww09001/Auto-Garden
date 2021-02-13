@@ -9,9 +9,9 @@ import time
 GPIO.setmode(GPIO.BOARD)  # Broadcom pin-numbering scheme
 
 # GPIO Variables
-moist = 7
-pump1 = 8
-pump2 = 9
+moist = 8
+pump1 = 7
+pump2 = 11
 pump_time = 10
 delay = 21600  # 6 hours
 # Function to set up GPIO output
@@ -49,11 +49,11 @@ def water(soil):
         if soil == 0:  # If soil is 0 (wet) do nothing and break the while loop
             break
         else:
-            GPIO.output(pump1.LOW)  # turn on pump 1
-            GPIO.output(pump2.LOW)  # turn on pump 2
+            GPIO.output(pump1, GPOI.LOW)  # turn on pump 1
+            GPIO.output(pump2, GPIO.LOW)  # turn on pump 2
             time.sleep(pump_time)  # pump for pump_time seconds
-            GPIO.output(pump1.HIGH)  # turn off pump 1
-            GPIO.output(pump2.HIGH)  # turn off pump 2
+            GPIO.output(pump1, GPIO.HIGH)  # turn off pump 1
+            GPIO.output(pump2, GPIO.HIGH)  # turn off pump 2
 
 
 # Function to compile everything and call it in time intervals
@@ -64,3 +64,5 @@ def auto_water():
 
 while True:
     auto_water()  # Run auto_water forever
+    
+GPIO.cleanup()
