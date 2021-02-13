@@ -49,7 +49,7 @@ def water(soil):
         if soil == 0:  # If soil is 0 (wet) do nothing and break the while loop
             break
         else:
-            GPIO.output(pump1, GPOI.LOW)  # turn on pump 1
+            GPIO.output(pump1, GPIO.LOW)  # turn on pump 1
             GPIO.output(pump2, GPIO.LOW)  # turn on pump 2
             time.sleep(pump_time)  # pump for pump_time seconds
             GPIO.output(pump1, GPIO.HIGH)  # turn off pump 1
