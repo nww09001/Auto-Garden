@@ -98,7 +98,7 @@ def water_2():
             GPIO.output(pump2, GPIO.HIGH)  # turn off pump 1
             p += 1 
             if p < pmax:
-                #print("p is less than pmax, keep pumping") # I will delete this after I know it works
+                print("p is less than pmax, keep pumping") # I will delete this after I know it works
             else:
                 break
 
@@ -134,7 +134,7 @@ def water_3():
             GPIO.output(pump3, GPIO.HIGH)  # turn off pump 1
             p += 1 
             if p < pmax:
-                #print("p is less than pmax, keep pumping") # I will delete this after I know it works
+                print("p is less than pmax, keep pumping") # I will delete this after I know it works
             else:
                 break
 
@@ -169,7 +169,7 @@ def water_4():
             GPIO.output(pump4, GPIO.HIGH)  # turn off pump 1
             p += 1 
             if p < pmax:
-                #print("p is less than pmax, keep pumping") # I will delete this after I know it works
+                print("p is less than pmax, keep pumping") # I will delete this after I know it works
             else:
                 break
 
